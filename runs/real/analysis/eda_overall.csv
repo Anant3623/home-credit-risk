@@ -1,0 +1,2 @@
+applicants,bad_count,bad_rate,bad_rate_ci_low,bad_rate_ci_high,label_definition
+307511,24825,0.08072881945686496,0.07977120926549289,0.08169690467420401,TARGET repayment difficulty

@@ -1,0 +1,13 @@
+{
+  "data_status": "real",
+  "lgd": 0.45,
+  "seed": 42,
+  "input": "runs/real/exports/applicant_features.csv",
+  "analysis": "runs/real/analysis",
+  "notebooks": [
+    "runs/real/notebooks/01_eda.ipynb",
+    "runs/real/notebooks/02_risk_drivers.ipynb",
+    "runs/real/notebooks/03_scorecard.ipynb",
+    "runs/real/notebooks/04_strategy.ipynb"
+  ]
+}

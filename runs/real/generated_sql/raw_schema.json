@@ -1,0 +1,934 @@
+{
+  "schema": "raw",
+  "sample_rows": 2000,
+  "tables": {
+    "application_train": {
+      "file": "data/raw/application_train.csv",
+      "bytes": 166133370,
+      "expected_rows": 307511,
+      "column_count": 122,
+      "columns": [
+        {
+          "name": "SK_ID_CURR",
+          "type": "BIGINT"
+        },
+        {
+          "name": "TARGET",
+          "type": "BIGINT"
+        },
+        {
+          "name": "NAME_CONTRACT_TYPE",
+          "type": "TEXT"
+        },
+        {
+          "name": "CODE_GENDER",
+          "type": "TEXT"
+        },
+        {
+          "name": "FLAG_OWN_CAR",
+          "type": "TEXT"
+        },
+        {
+          "name": "FLAG_OWN_REALTY",
+          "type": "TEXT"
+        },
+        {
+          "name": "CNT_CHILDREN",
+          "type": "BIGINT"
+        },
+        {
+          "name": "AMT_INCOME_TOTAL",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "AMT_CREDIT",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "AMT_ANNUITY",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "AMT_GOODS_PRICE",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "NAME_TYPE_SUITE",
+          "type": "TEXT"
+        },
+        {
+          "name": "NAME_INCOME_TYPE",
+          "type": "TEXT"
+        },
+        {
+          "name": "NAME_EDUCATION_TYPE",
+          "type": "TEXT"
+        },
+        {
+          "name": "NAME_FAMILY_STATUS",
+          "type": "TEXT"
+        },
+        {
+          "name": "NAME_HOUSING_TYPE",
+          "type": "TEXT"
+        },
+        {
+          "name": "REGION_POPULATION_RELATIVE",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "DAYS_BIRTH",
+          "type": "BIGINT"
+        },
+        {
+          "name": "DAYS_EMPLOYED",
+          "type": "BIGINT"
+        },
+        {
+          "name": "DAYS_REGISTRATION",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "DAYS_ID_PUBLISH",
+          "type": "BIGINT"
+        },
+        {
+          "name": "OWN_CAR_AGE",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "FLAG_MOBIL",
+          "type": "BIGINT"
+        },
+        {
+          "name": "FLAG_EMP_PHONE",
+          "type": "BIGINT"
+        },
+        {
+          "name": "FLAG_WORK_PHONE",
+          "type": "BIGINT"
+        },
+        {
+          "name": "FLAG_CONT_MOBILE",
+          "type": "BIGINT"
+        },
+        {
+          "name": "FLAG_PHONE",
+          "type": "BIGINT"
+        },
+        {
+          "name": "FLAG_EMAIL",
+          "type": "BIGINT"
+        },
+        {
+          "name": "OCCUPATION_TYPE",
+          "type": "TEXT"
+        },
+        {
+          "name": "CNT_FAM_MEMBERS",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "REGION_RATING_CLIENT",
+          "type": "BIGINT"
+        },
+        {
+          "name": "REGION_RATING_CLIENT_W_CITY",
+          "type": "BIGINT"
+        },
+        {
+          "name": "WEEKDAY_APPR_PROCESS_START",
+          "type": "TEXT"
+        },
+        {
+          "name": "HOUR_APPR_PROCESS_START",
+          "type": "BIGINT"
+        },
+        {
+          "name": "REG_REGION_NOT_LIVE_REGION",
+          "type": "BIGINT"
+        },
+        {
+          "name": "REG_REGION_NOT_WORK_REGION",
+          "type": "BIGINT"
+        },
+        {
+          "name": "LIVE_REGION_NOT_WORK_REGION",
+          "type": "BIGINT"
+        },
+        {
+          "name": "REG_CITY_NOT_LIVE_CITY",
+          "type": "BIGINT"
+        },
+        {
+          "name": "REG_CITY_NOT_WORK_CITY",
+          "type": "BIGINT"
+        },
+        {
+          "name": "LIVE_CITY_NOT_WORK_CITY",
+          "type": "BIGINT"
+        },
+        {
+          "name": "ORGANIZATION_TYPE",
+          "type": "TEXT"
+        },
+        {
+          "name": "EXT_SOURCE_1",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "EXT_SOURCE_2",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "EXT_SOURCE_3",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "APARTMENTS_AVG",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "BASEMENTAREA_AVG",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "YEARS_BEGINEXPLUATATION_AVG",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "YEARS_BUILD_AVG",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "COMMONAREA_AVG",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "ELEVATORS_AVG",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "ENTRANCES_AVG",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "FLOORSMAX_AVG",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "FLOORSMIN_AVG",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "LANDAREA_AVG",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "LIVINGAPARTMENTS_AVG",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "LIVINGAREA_AVG",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "NONLIVINGAPARTMENTS_AVG",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "NONLIVINGAREA_AVG",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "APARTMENTS_MODE",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "BASEMENTAREA_MODE",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "YEARS_BEGINEXPLUATATION_MODE",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "YEARS_BUILD_MODE",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "COMMONAREA_MODE",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "ELEVATORS_MODE",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "ENTRANCES_MODE",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "FLOORSMAX_MODE",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "FLOORSMIN_MODE",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "LANDAREA_MODE",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "LIVINGAPARTMENTS_MODE",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "LIVINGAREA_MODE",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "NONLIVINGAPARTMENTS_MODE",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "NONLIVINGAREA_MODE",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "APARTMENTS_MEDI",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "BASEMENTAREA_MEDI",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "YEARS_BEGINEXPLUATATION_MEDI",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "YEARS_BUILD_MEDI",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "COMMONAREA_MEDI",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "ELEVATORS_MEDI",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "ENTRANCES_MEDI",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "FLOORSMAX_MEDI",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "FLOORSMIN_MEDI",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "LANDAREA_MEDI",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "LIVINGAPARTMENTS_MEDI",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "LIVINGAREA_MEDI",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "NONLIVINGAPARTMENTS_MEDI",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "NONLIVINGAREA_MEDI",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "FONDKAPREMONT_MODE",
+          "type": "TEXT"
+        },
+        {
+          "name": "HOUSETYPE_MODE",
+          "type": "TEXT"
+        },
+        {
+          "name": "TOTALAREA_MODE",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "WALLSMATERIAL_MODE",
+          "type": "TEXT"
+        },
+        {
+          "name": "EMERGENCYSTATE_MODE",
+          "type": "TEXT"
+        },
+        {
+          "name": "OBS_30_CNT_SOCIAL_CIRCLE",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "DEF_30_CNT_SOCIAL_CIRCLE",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "OBS_60_CNT_SOCIAL_CIRCLE",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "DEF_60_CNT_SOCIAL_CIRCLE",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "DAYS_LAST_PHONE_CHANGE",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "FLAG_DOCUMENT_2",
+          "type": "BIGINT"
+        },
+        {
+          "name": "FLAG_DOCUMENT_3",
+          "type": "BIGINT"
+        },
+        {
+          "name": "FLAG_DOCUMENT_4",
+          "type": "BIGINT"
+        },
+        {
+          "name": "FLAG_DOCUMENT_5",
+          "type": "BIGINT"
+        },
+        {
+          "name": "FLAG_DOCUMENT_6",
+          "type": "BIGINT"
+        },
+        {
+          "name": "FLAG_DOCUMENT_7",
+          "type": "BIGINT"
+        },
+        {
+          "name": "FLAG_DOCUMENT_8",
+          "type": "BIGINT"
+        },
+        {
+          "name": "FLAG_DOCUMENT_9",
+          "type": "BIGINT"
+        },
+        {
+          "name": "FLAG_DOCUMENT_10",
+          "type": "BIGINT"
+        },
+        {
+          "name": "FLAG_DOCUMENT_11",
+          "type": "BIGINT"
+        },
+        {
+          "name": "FLAG_DOCUMENT_12",
+          "type": "BIGINT"
+        },
+        {
+          "name": "FLAG_DOCUMENT_13",
+          "type": "BIGINT"
+        },
+        {
+          "name": "FLAG_DOCUMENT_14",
+          "type": "BIGINT"
+        },
+        {
+          "name": "FLAG_DOCUMENT_15",
+          "type": "BIGINT"
+        },
+        {
+          "name": "FLAG_DOCUMENT_16",
+          "type": "BIGINT"
+        },
+        {
+          "name": "FLAG_DOCUMENT_17",
+          "type": "BIGINT"
+        },
+        {
+          "name": "FLAG_DOCUMENT_18",
+          "type": "BIGINT"
+        },
+        {
+          "name": "FLAG_DOCUMENT_19",
+          "type": "BIGINT"
+        },
+        {
+          "name": "FLAG_DOCUMENT_20",
+          "type": "BIGINT"
+        },
+        {
+          "name": "FLAG_DOCUMENT_21",
+          "type": "BIGINT"
+        },
+        {
+          "name": "AMT_REQ_CREDIT_BUREAU_HOUR",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "AMT_REQ_CREDIT_BUREAU_DAY",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "AMT_REQ_CREDIT_BUREAU_WEEK",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "AMT_REQ_CREDIT_BUREAU_MON",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "AMT_REQ_CREDIT_BUREAU_QRT",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "AMT_REQ_CREDIT_BUREAU_YEAR",
+          "type": "NUMERIC"
+        }
+      ]
+    },
+    "previous_application": {
+      "file": "data/raw/previous_application.csv",
+      "bytes": 404973293,
+      "expected_rows": 1670214,
+      "column_count": 37,
+      "columns": [
+        {
+          "name": "SK_ID_PREV",
+          "type": "BIGINT"
+        },
+        {
+          "name": "SK_ID_CURR",
+          "type": "BIGINT"
+        },
+        {
+          "name": "NAME_CONTRACT_TYPE",
+          "type": "TEXT"
+        },
+        {
+          "name": "AMT_ANNUITY",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "AMT_APPLICATION",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "AMT_CREDIT",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "AMT_DOWN_PAYMENT",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "AMT_GOODS_PRICE",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "WEEKDAY_APPR_PROCESS_START",
+          "type": "TEXT"
+        },
+        {
+          "name": "HOUR_APPR_PROCESS_START",
+          "type": "BIGINT"
+        },
+        {
+          "name": "FLAG_LAST_APPL_PER_CONTRACT",
+          "type": "TEXT"
+        },
+        {
+          "name": "NFLAG_LAST_APPL_IN_DAY",
+          "type": "BIGINT"
+        },
+        {
+          "name": "RATE_DOWN_PAYMENT",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "RATE_INTEREST_PRIMARY",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "RATE_INTEREST_PRIVILEGED",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "NAME_CASH_LOAN_PURPOSE",
+          "type": "TEXT"
+        },
+        {
+          "name": "NAME_CONTRACT_STATUS",
+          "type": "TEXT"
+        },
+        {
+          "name": "DAYS_DECISION",
+          "type": "BIGINT"
+        },
+        {
+          "name": "NAME_PAYMENT_TYPE",
+          "type": "TEXT"
+        },
+        {
+          "name": "CODE_REJECT_REASON",
+          "type": "TEXT"
+        },
+        {
+          "name": "NAME_TYPE_SUITE",
+          "type": "TEXT"
+        },
+        {
+          "name": "NAME_CLIENT_TYPE",
+          "type": "TEXT"
+        },
+        {
+          "name": "NAME_GOODS_CATEGORY",
+          "type": "TEXT"
+        },
+        {
+          "name": "NAME_PORTFOLIO",
+          "type": "TEXT"
+        },
+        {
+          "name": "NAME_PRODUCT_TYPE",
+          "type": "TEXT"
+        },
+        {
+          "name": "CHANNEL_TYPE",
+          "type": "TEXT"
+        },
+        {
+          "name": "SELLERPLACE_AREA",
+          "type": "BIGINT"
+        },
+        {
+          "name": "NAME_SELLER_INDUSTRY",
+          "type": "TEXT"
+        },
+        {
+          "name": "CNT_PAYMENT",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "NAME_YIELD_GROUP",
+          "type": "TEXT"
+        },
+        {
+          "name": "PRODUCT_COMBINATION",
+          "type": "TEXT"
+        },
+        {
+          "name": "DAYS_FIRST_DRAWING",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "DAYS_FIRST_DUE",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "DAYS_LAST_DUE_1ST_VERSION",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "DAYS_LAST_DUE",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "DAYS_TERMINATION",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "NFLAG_INSURED_ON_APPROVAL",
+          "type": "NUMERIC"
+        }
+      ]
+    },
+    "installments_payments": {
+      "file": "data/raw/installments_payments.csv",
+      "bytes": 723118349,
+      "expected_rows": 13605401,
+      "column_count": 8,
+      "columns": [
+        {
+          "name": "SK_ID_PREV",
+          "type": "BIGINT"
+        },
+        {
+          "name": "SK_ID_CURR",
+          "type": "BIGINT"
+        },
+        {
+          "name": "NUM_INSTALMENT_VERSION",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "NUM_INSTALMENT_NUMBER",
+          "type": "BIGINT"
+        },
+        {
+          "name": "DAYS_INSTALMENT",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "DAYS_ENTRY_PAYMENT",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "AMT_INSTALMENT",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "AMT_PAYMENT",
+          "type": "NUMERIC"
+        }
+      ]
+    },
+    "pos_cash_balance": {
+      "file": "data/raw/POS_CASH_balance.csv",
+      "bytes": 392703158,
+      "expected_rows": 10001358,
+      "column_count": 8,
+      "columns": [
+        {
+          "name": "SK_ID_PREV",
+          "type": "BIGINT"
+        },
+        {
+          "name": "SK_ID_CURR",
+          "type": "BIGINT"
+        },
+        {
+          "name": "MONTHS_BALANCE",
+          "type": "BIGINT"
+        },
+        {
+          "name": "CNT_INSTALMENT",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "CNT_INSTALMENT_FUTURE",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "NAME_CONTRACT_STATUS",
+          "type": "TEXT"
+        },
+        {
+          "name": "SK_DPD",
+          "type": "BIGINT"
+        },
+        {
+          "name": "SK_DPD_DEF",
+          "type": "BIGINT"
+        }
+      ]
+    },
+    "credit_card_balance": {
+      "file": "data/raw/credit_card_balance.csv",
+      "bytes": 424582605,
+      "expected_rows": 3840312,
+      "column_count": 23,
+      "columns": [
+        {
+          "name": "SK_ID_PREV",
+          "type": "BIGINT"
+        },
+        {
+          "name": "SK_ID_CURR",
+          "type": "BIGINT"
+        },
+        {
+          "name": "MONTHS_BALANCE",
+          "type": "BIGINT"
+        },
+        {
+          "name": "AMT_BALANCE",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "AMT_CREDIT_LIMIT_ACTUAL",
+          "type": "BIGINT"
+        },
+        {
+          "name": "AMT_DRAWINGS_ATM_CURRENT",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "AMT_DRAWINGS_CURRENT",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "AMT_DRAWINGS_OTHER_CURRENT",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "AMT_DRAWINGS_POS_CURRENT",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "AMT_INST_MIN_REGULARITY",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "AMT_PAYMENT_CURRENT",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "AMT_PAYMENT_TOTAL_CURRENT",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "AMT_RECEIVABLE_PRINCIPAL",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "AMT_RECIVABLE",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "AMT_TOTAL_RECEIVABLE",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "CNT_DRAWINGS_ATM_CURRENT",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "CNT_DRAWINGS_CURRENT",
+          "type": "BIGINT"
+        },
+        {
+          "name": "CNT_DRAWINGS_OTHER_CURRENT",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "CNT_DRAWINGS_POS_CURRENT",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "CNT_INSTALMENT_MATURE_CUM",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "NAME_CONTRACT_STATUS",
+          "type": "TEXT"
+        },
+        {
+          "name": "SK_DPD",
+          "type": "BIGINT"
+        },
+        {
+          "name": "SK_DPD_DEF",
+          "type": "BIGINT"
+        }
+      ]
+    },
+    "bureau": {
+      "file": "data/raw/bureau.csv",
+      "bytes": 170016717,
+      "expected_rows": 1716428,
+      "column_count": 17,
+      "columns": [
+        {
+          "name": "SK_ID_CURR",
+          "type": "BIGINT"
+        },
+        {
+          "name": "SK_ID_BUREAU",
+          "type": "BIGINT"
+        },
+        {
+          "name": "CREDIT_ACTIVE",
+          "type": "TEXT"
+        },
+        {
+          "name": "CREDIT_CURRENCY",
+          "type": "TEXT"
+        },
+        {
+          "name": "DAYS_CREDIT",
+          "type": "BIGINT"
+        },
+        {
+          "name": "CREDIT_DAY_OVERDUE",
+          "type": "BIGINT"
+        },
+        {
+          "name": "DAYS_CREDIT_ENDDATE",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "DAYS_ENDDATE_FACT",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "AMT_CREDIT_MAX_OVERDUE",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "CNT_CREDIT_PROLONG",
+          "type": "BIGINT"
+        },
+        {
+          "name": "AMT_CREDIT_SUM",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "AMT_CREDIT_SUM_DEBT",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "AMT_CREDIT_SUM_LIMIT",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "AMT_CREDIT_SUM_OVERDUE",
+          "type": "NUMERIC"
+        },
+        {
+          "name": "CREDIT_TYPE",
+          "type": "TEXT"
+        },
+        {
+          "name": "DAYS_CREDIT_UPDATE",
+          "type": "BIGINT"
+        },
+        {
+          "name": "AMT_ANNUITY",
+          "type": "NUMERIC"
+        }
+      ]
+    },
+    "bureau_balance": {
+      "file": "data/raw/bureau_balance.csv",
+      "bytes": 375592889,
+      "expected_rows": 27299925,
+      "column_count": 3,
+      "columns": [
+        {
+          "name": "SK_ID_BUREAU",
+          "type": "BIGINT"
+        },
+        {
+          "name": "MONTHS_BALANCE",
+          "type": "BIGINT"
+        },
+        {
+          "name": "STATUS",
+          "type": "TEXT"
+        }
+      ]
+    }
+  }
+}

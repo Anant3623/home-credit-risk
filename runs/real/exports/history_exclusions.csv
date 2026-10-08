@@ -1,0 +1,9 @@
+check_name,row_count
+bureau_future_or_missing_credit_day_rows,0
+previous_future_or_missing_decision_rows,0
+cc_future_or_missing_month_rows,0
+installment_missing_due_rows,0
+installment_future_payment_rows,0
+installment_future_due_rows,0
+bureau_future_or_missing_month_rows,0
+pos_future_or_missing_month_rows,0

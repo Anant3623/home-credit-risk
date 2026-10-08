@@ -1,0 +1,26 @@
+[
+  {
+    "notebook": "01_eda.ipynb",
+    "code_cells": 4,
+    "executed_cells": 4,
+    "errors": 0
+  },
+  {
+    "notebook": "02_risk_drivers.ipynb",
+    "code_cells": 4,
+    "executed_cells": 4,
+    "errors": 0
+  },
+  {
+    "notebook": "03_scorecard.ipynb",
+    "code_cells": 4,
+    "executed_cells": 4,
+    "errors": 0
+  },
+  {
+    "notebook": "04_strategy.ipynb",
+    "code_cells": 4,
+    "executed_cells": 4,
+    "errors": 0
+  }
+]

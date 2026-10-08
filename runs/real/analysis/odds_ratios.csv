@@ -1,0 +1,26 @@
+feature,coefficient,odds_ratio,input_unit,coefficient_method
+ext_source_3,-0.7145398989353178,0.4894172413950157,+1 WoE = +1 log(good_distribution/bad_distribution),L2 regularized unweighted logistic; no Wald CI reported
+ext_source_2,-0.7896263283313403,0.45401441591355995,+1 WoE = +1 log(good_distribution/bad_distribution),L2 regularized unweighted logistic; no Wald CI reported
+ext_source_1,-0.5058645788728815,0.6029840227510608,+1 WoE = +1 log(good_distribution/bad_distribution),L2 regularized unweighted logistic; no Wald CI reported
+employed_years,-0.4482731675632986,0.6387301798317279,+1 WoE = +1 log(good_distribution/bad_distribution),L2 regularized unweighted logistic; no Wald CI reported
+occupation_type,-0.2633673292955977,0.7684595677486588,+1 WoE = +1 log(good_distribution/bad_distribution),L2 regularized unweighted logistic; no Wald CI reported
+age_years,0.037536534781024616,1.0382499286227016,+1 WoE = +1 log(good_distribution/bad_distribution),L2 regularized unweighted logistic; no Wald CI reported
+credit_to_goods,-0.6313727125341477,0.5318612071284817,+1 WoE = +1 log(good_distribution/bad_distribution),L2 regularized unweighted logistic; no Wald CI reported
+bureau_credit_to_debt_ratio,-0.40125414872070786,0.6694798919566429,+1 WoE = +1 log(good_distribution/bad_distribution),L2 regularized unweighted logistic; no Wald CI reported
+cc_utilization_mean,-0.3939775891527706,0.6743691692555243,+1 WoE = +1 log(good_distribution/bad_distribution),L2 regularized unweighted logistic; no Wald CI reported
+installment_late_rate,-0.5360847876621043,0.5850343077975481,+1 WoE = +1 log(good_distribution/bad_distribution),L2 regularized unweighted logistic; no Wald CI reported
+previous_refusal_rate,-0.2815578245838948,0.7546072795617296,+1 WoE = +1 log(good_distribution/bad_distribution),L2 regularized unweighted logistic; no Wald CI reported
+income_type,-0.19023552688102766,0.8267643857729222,+1 WoE = +1 log(good_distribution/bad_distribution),L2 regularized unweighted logistic; no Wald CI reported
+mean_days_late,-0.15128235057702552,0.8596049544364334,+1 WoE = +1 log(good_distribution/bad_distribution),L2 regularized unweighted logistic; no Wald CI reported
+education_type,-0.5325730375598333,0.5870924137495688,+1 WoE = +1 log(good_distribution/bad_distribution),L2 regularized unweighted logistic; no Wald CI reported
+cc_utilization_max,-0.3942719482043267,0.6741706917997144,+1 WoE = +1 log(good_distribution/bad_distribution),L2 regularized unweighted logistic; no Wald CI reported
+goods_amount,-0.16161085629334696,0.8507722127835685,+1 WoE = +1 log(good_distribution/bad_distribution),L2 regularized unweighted logistic; no Wald CI reported
+previous_refused_count,-0.2813715276105422,0.7547478737097072,+1 WoE = +1 log(good_distribution/bad_distribution),L2 regularized unweighted logistic; no Wald CI reported
+bureau_closed_loan_count,-0.1243912735973285,0.8830342652863135,+1 WoE = +1 log(good_distribution/bad_distribution),L2 regularized unweighted logistic; no Wald CI reported
+gender,-0.5064493587578134,0.6026315129040001,+1 WoE = +1 log(good_distribution/bad_distribution),L2 regularized unweighted logistic; no Wald CI reported
+late_installment_count,-0.1695810353420728,0.8440183563928427,+1 WoE = +1 log(good_distribution/bad_distribution),L2 regularized unweighted logistic; no Wald CI reported
+bureau_debt_sum,-0.31212993045025805,0.7318864277171293,+1 WoE = +1 log(good_distribution/bad_distribution),L2 regularized unweighted logistic; no Wald CI reported
+credit_amount,-0.1325368060003805,0.8758706962157548,+1 WoE = +1 log(good_distribution/bad_distribution),L2 regularized unweighted logistic; no Wald CI reported
+max_days_late,0.12085959307763461,1.1284664567412872,+1 WoE = +1 log(good_distribution/bad_distribution),L2 regularized unweighted logistic; no Wald CI reported
+installment_paid_amount,-0.3568576264459882,0.6998721339247241,+1 WoE = +1 log(good_distribution/bad_distribution),L2 regularized unweighted logistic; no Wald CI reported
+scheduled_installment_amount,-0.3963527197744427,0.6727693550272738,+1 WoE = +1 log(good_distribution/bad_distribution),L2 regularized unweighted logistic; no Wald CI reported

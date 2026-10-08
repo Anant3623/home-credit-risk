@@ -1,0 +1,31 @@
+{
+  "complete": true,
+  "model_version": "woe-logistic-v1",
+  "input_sha256": "e9729cd0faf80ccb960a7eceb446842260947bfa31961a91c96c05d085544f69",
+  "lgd": 0.45,
+  "seed": 42,
+  "data_status": "real",
+  "artifacts": [
+    "eda_overall.csv",
+    "eda_segments.csv",
+    "feature_nulls.csv",
+    "woe_bins.csv",
+    "iv_summary.csv",
+    "chi_square_tests.csv",
+    "scored_applications.csv",
+    "odds_ratios.csv",
+    "model_metrics.csv",
+    "model_metrics.json",
+    "risk_bands.csv",
+    "calibration.csv",
+    "cutoff_table.csv",
+    "strategy_comparisons.csv",
+    "model_manifest.json",
+    "scorecard.joblib",
+    "findings.md",
+    "figures/test_roc.png",
+    "figures/risk_bands.png",
+    "figures/test_calibration.png",
+    "figures/strategy_tradeoff.png"
+  ]
+}

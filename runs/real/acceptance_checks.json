@@ -1,0 +1,146 @@
+[
+  {
+    "check": "raw_count_application_train",
+    "actual": 307511,
+    "expected": 307511,
+    "passed": true
+  },
+  {
+    "check": "raw_count_previous_application",
+    "actual": 1670214,
+    "expected": 1670214,
+    "passed": true
+  },
+  {
+    "check": "raw_count_installments_payments",
+    "actual": 13605401,
+    "expected": 13605401,
+    "passed": true
+  },
+  {
+    "check": "raw_count_pos_cash_balance",
+    "actual": 10001358,
+    "expected": 10001358,
+    "passed": true
+  },
+  {
+    "check": "raw_count_credit_card_balance",
+    "actual": 3840312,
+    "expected": 3840312,
+    "passed": true
+  },
+  {
+    "check": "raw_count_bureau",
+    "actual": 1716428,
+    "expected": 1716428,
+    "passed": true
+  },
+  {
+    "check": "raw_count_bureau_balance",
+    "actual": 27299925,
+    "expected": 27299925,
+    "passed": true
+  },
+  {
+    "check": "unique_int_applicant_repay",
+    "actual": 0,
+    "expected": 0,
+    "passed": true
+  },
+  {
+    "check": "unique_int_applicant_bureau",
+    "actual": 0,
+    "expected": 0,
+    "passed": true
+  },
+  {
+    "check": "unique_int_applicant_prev",
+    "actual": 0,
+    "expected": 0,
+    "passed": true
+  },
+  {
+    "check": "unique_int_applicant_pos",
+    "actual": 0,
+    "expected": 0,
+    "passed": true
+  },
+  {
+    "check": "unique_int_applicant_cc",
+    "actual": 0,
+    "expected": 0,
+    "passed": true
+  },
+  {
+    "check": "unique_fact_application",
+    "actual": 0,
+    "expected": 0,
+    "passed": true
+  },
+  {
+    "check": "application_coverage",
+    "actual": 307511,
+    "expected": 307511,
+    "passed": true
+  },
+  {
+    "check": "critical_dq_failures",
+    "actual": 0,
+    "expected": 0,
+    "passed": true
+  },
+  {
+    "check": "model_target_alignment",
+    "actual": 0,
+    "expected": 0,
+    "passed": true
+  },
+  {
+    "check": "valid_score_probability",
+    "actual": 0,
+    "expected": 0,
+    "passed": true
+  },
+  {
+    "check": "complete_dimension_keys",
+    "actual": 0,
+    "expected": 0,
+    "passed": true
+  },
+  {
+    "check": "monthly_grain_unique",
+    "actual": 0,
+    "expected": 0,
+    "passed": true
+  },
+  {
+    "check": "monthly_summary_reconciles",
+    "actual": "14701612",
+    "expected": 14701612,
+    "passed": true
+  },
+  {
+    "check": "roll_counts_consecutive_months",
+    "actual": "14178097",
+    "expected": 14178097,
+    "passed": true
+  },
+  {
+    "check": "roll_denominators_sum_to_one",
+    "actual": 0,
+    "expected": 0,
+    "passed": true
+  },
+  {
+    "check": "score_direction",
+    "actual": 0,
+    "expected": 0,
+    "passed": true
+  },
+  {
+    "check": "predicted_band_order",
+    "actual": 0,
+    "expected": 0,
+    "passed": true
+  }
+]

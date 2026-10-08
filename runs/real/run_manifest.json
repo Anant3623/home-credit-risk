@@ -1,0 +1,1877 @@
+{
+  "data_status": "real",
+  "started_at": "2026-10-08T01:57:28.677065+00:00",
+  "stages": {
+    "raw": "passed",
+    "dq": "passed",
+    "staging": "passed",
+    "intermediate": "passed",
+    "applicant_features": "passed",
+    "analysis": "passed",
+    "marts": "passed",
+    "exports": "passed",
+    "notebooks": "passed"
+  },
+  "status": "complete",
+  "source": "Home Credit Default Risk",
+  "raw_counts": [
+    {
+      "table": "application_train",
+      "actual_rows": 307511,
+      "expected_rows": 307511,
+      "matches_expected": true,
+      "sha256": "52e96b895b1112e1c853f670e58372719c8441c5ed1c57ac2f7fad559d784f5f",
+      "bytes": 166133370,
+      "seconds": 0,
+      "text_fallback": false
+    },
+    {
+      "table": "previous_application",
+      "actual_rows": 1670214,
+      "expected_rows": 1670214,
+      "matches_expected": true,
+      "sha256": "5046cd657ee04df2eaa6dc8308ae86be6b3b1763674a3f63574886a2f2896505",
+      "bytes": 404973293,
+      "seconds": 0,
+      "text_fallback": false
+    },
+    {
+      "table": "installments_payments",
+      "actual_rows": 13605401,
+      "expected_rows": 13605401,
+      "matches_expected": true,
+      "sha256": "428c2e2496e4d6d697ee8270e98497e5213c41be16d882eed1bc95b133726797",
+      "bytes": 723118349,
+      "seconds": 0,
+      "text_fallback": false
+    },
+    {
+      "table": "pos_cash_balance",
+      "actual_rows": 10001358,
+      "expected_rows": 10001358,
+      "matches_expected": true,
+      "sha256": "0e13bc573ffa8fc29b3f00d975e557143193a405d675b0e4694b06fbdffcb0cd",
+      "bytes": 392703158,
+      "seconds": 0,
+      "text_fallback": false
+    },
+    {
+      "table": "credit_card_balance",
+      "actual_rows": 3840312,
+      "expected_rows": 3840312,
+      "matches_expected": true,
+      "sha256": "a9cdc48900d55131c90f3128b991859aeb94ca1326fb5f4d1624b9fd03782247",
+      "bytes": 424582605,
+      "seconds": 0,
+      "text_fallback": false
+    },
+    {
+      "table": "bureau",
+      "actual_rows": 1716428,
+      "expected_rows": 1716428,
+      "matches_expected": true,
+      "sha256": "9d799143423f280720cf51c1bfbbab2a0422da8ff2763335bb30bf43155494f7",
+      "bytes": 170016717,
+      "seconds": 0,
+      "text_fallback": false
+    },
+    {
+      "table": "bureau_balance",
+      "actual_rows": 27299925,
+      "expected_rows": 27299925,
+      "matches_expected": true,
+      "sha256": "33e09f06174c26f0be6b8b7398886c69e7bf0abbb29b4122f7841ffe545729a9",
+      "bytes": 375592889,
+      "seconds": 0,
+      "text_fallback": false
+    }
+  ],
+  "analysis": {
+    "model_version": "woe-logistic-v1",
+    "data_status": "real",
+    "input_path": "runs/real/exports/applicant_features.csv",
+    "input_sha256": "e9729cd0faf80ccb960a7eceb446842260947bfa31961a91c96c05d085544f69",
+    "seed": 42,
+    "lgd": 0.45,
+    "ead_proxy": "nonnegative current credit_amount",
+    "ead_missing_count": 0,
+    "target_definition": "TARGET repayment difficulty; not verified loss",
+    "split_counts": {
+      "train": 184506,
+      "test": 61503,
+      "validation": 61502
+    },
+    "split_method": "stratified random 60/20/20",
+    "selected_features": [
+      "ext_source_3",
+      "ext_source_2",
+      "ext_source_1",
+      "employed_years",
+      "occupation_type",
+      "age_years",
+      "credit_to_goods",
+      "bureau_credit_to_debt_ratio",
+      "cc_utilization_mean",
+      "installment_late_rate",
+      "previous_refusal_rate",
+      "income_type",
+      "mean_days_late",
+      "education_type",
+      "cc_utilization_max",
+      "goods_amount",
+      "previous_refused_count",
+      "bureau_closed_loan_count",
+      "gender",
+      "late_installment_count",
+      "bureau_debt_sum",
+      "credit_amount",
+      "max_days_late",
+      "installment_paid_amount",
+      "scheduled_installment_amount"
+    ],
+    "iv_threshold": 0.01,
+    "max_features": 25,
+    "intercept": -2.436270450076684,
+    "logistic_C": 0.5,
+    "class_weight": null,
+    "calibration_method": "native logistic probabilities; no post-hoc calibration fitted",
+    "band_boundaries": [
+      0.017348372464500387,
+      0.025470285426694588,
+      0.03418387509381307,
+      0.044106300023155603,
+      0.05622779262769631,
+      0.07154458614855366,
+      0.09245029095026439,
+      0.12286396242537384,
+      0.17718710063678203
+    ],
+    "band_boundary_source": "validation predictions only",
+    "score_base": 600,
+    "score_base_good_bad_odds": 50,
+    "score_pdo": 20,
+    "woe_convention": "ln(smoothed good distribution / smoothed bad distribution)",
+    "woe_smoothing": 0.5,
+    "woe_specs": {
+      "age_years": {
+        "kind": "numeric",
+        "clip_low": 22.61738535249829,
+        "clip_high": 66.8145106091718,
+        "edges": [
+          31.98631074606434,
+          39.44147843942505,
+          47.11841204654346,
+          56.03832991101985
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "bin_5",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": -0.36658166732267516,
+          "bin_2": -0.1541080713583426,
+          "bin_3": 0.017338908021569125,
+          "bin_4": 0.19717506237674923,
+          "bin_5": 0.4795697360406808,
+          "__MISSING__": 0.0,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "employed_years": {
+        "kind": "numeric",
+        "clip_low": 0.3039014373716632,
+        "clip_high": 31.044490075290895,
+        "edges": [
+          1.68104038329911,
+          3.4168377823408624,
+          5.913757700205339,
+          10.075290896646132
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "bin_5",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": -0.38033692220092474,
+          "bin_2": -0.3034412860285617,
+          "bin_3": -0.10388268940753319,
+          "bin_4": 0.11387017695032851,
+          "bin_5": 0.484314836741235,
+          "__MISSING__": 0.42902002258742894,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "is_employed_missing": {
+        "kind": "numeric",
+        "clip_low": 0.0,
+        "clip_high": 1.0,
+        "edges": [
+          0.0
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.0,
+          "bin_2": 6.123630677061617e-05,
+          "__MISSING__": 0.0,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "income_amount": {
+        "kind": "numeric",
+        "clip_low": 45000.0,
+        "clip_high": 472500.0,
+        "edges": [
+          99000.0,
+          135000.0,
+          162000.0,
+          225000.0
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "bin_5",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": -0.021406511825821345,
+          "bin_2": -0.08556234722445419,
+          "bin_3": -0.048397082369146756,
+          "bin_4": -0.031381042662568054,
+          "bin_5": 0.17886968921257265,
+          "__MISSING__": 0.0,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "credit_amount": {
+        "kind": "numeric",
+        "clip_low": 76410.0,
+        "clip_high": 1850544.0,
+        "edges": [
+          254700.0,
+          432661.5,
+          604152.0,
+          900000.0
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "bin_5",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.1163711223765376,
+          "bin_2": -0.12269727720041715,
+          "bin_3": -0.23564840930657374,
+          "bin_4": -0.010393514534999737,
+          "bin_5": 0.3124258665906539,
+          "__MISSING__": 0.0,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "annuity_amount": {
+        "kind": "numeric",
+        "clip_low": 6191.91,
+        "clip_high": 70209.0,
+        "edges": [
+          14697.0,
+          21888.0,
+          28048.5,
+          37516.5
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "bin_5",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.14982417063015252,
+          "bin_2": -0.060775346121287266,
+          "bin_3": -0.08869930151152963,
+          "bin_4": -0.14709979400677617,
+          "bin_5": 0.1836406907808979,
+          "__MISSING__": 0.2757519097355108,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "goods_amount": {
+        "kind": "numeric",
+        "clip_low": 67500.0,
+        "clip_high": 1800000.0,
+        "edges": [
+          225000.0,
+          378000.0,
+          522000.0,
+          823500.0
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "bin_5",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.08302540411993317,
+          "bin_2": -0.09883649968443774,
+          "bin_3": -0.2733541937232683,
+          "bin_4": 0.06314474879558442,
+          "bin_5": 0.36530247757856726,
+          "__MISSING__": -0.18611288683477822,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "credit_to_income": {
+        "kind": "numeric",
+        "clip_low": 0.5900804444444445,
+        "clip_high": 13.04544,
+        "edges": [
+          1.8181818181818183,
+          2.764,
+          3.9032,
+          5.767619047619048
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "bin_5",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.10565446101385169,
+          "bin_2": -0.06853115416655482,
+          "bin_3": -0.09705188230138663,
+          "bin_4": -0.028860128602525497,
+          "bin_5": 0.10494758502482501,
+          "__MISSING__": 0.0,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "annuity_to_income": {
+        "kind": "numeric",
+        "clip_low": 0.0392857142857142,
+        "clip_high": 0.485285882352941,
+        "edges": [
+          0.10350352941176465,
+          0.1438,
+          0.1856666666666666,
+          0.24634319419237738
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "bin_5",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.1290960248333952,
+          "bin_2": 0.035912992978261137,
+          "bin_3": -0.026544373693393037,
+          "bin_4": -0.06999054288531116,
+          "bin_5": -0.0573888342343743,
+          "__MISSING__": 0.2757519097355108,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "credit_to_goods": {
+        "kind": "numeric",
+        "clip_low": 1.0,
+        "clip_high": 1.4752,
+        "edges": [
+          1.0,
+          1.079198675496689,
+          1.1452,
+          1.2112
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "bin_5",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.0,
+          "bin_2": 0.22585831004005932,
+          "bin_3": 0.1917693535427315,
+          "bin_4": -0.08702549596302601,
+          "bin_5": -0.4073782650549668,
+          "__MISSING__": -0.18611288683477822,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "ext_source_1": {
+        "kind": "numeric",
+        "clip_low": 0.08260377007595121,
+        "clip_high": 0.8896803989328954,
+        "edges": [
+          0.29515572981186006,
+          0.4366832845854351,
+          0.5717027336457878,
+          0.7096014123545155
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "bin_5",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": -0.6427480474545488,
+          "bin_2": -0.11648390140415626,
+          "bin_3": 0.24166771723909827,
+          "bin_4": 0.5797677169931593,
+          "bin_5": 1.0423494374859754,
+          "__MISSING__": -0.059574369675861785,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "ext_source_2": {
+        "kind": "numeric",
+        "clip_low": 0.029543963437184073,
+        "clip_high": 0.7829455209663897,
+        "edges": [
+          0.3410069251070991,
+          0.5124037242404538,
+          0.6087249474208374,
+          0.6822394815909179
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "bin_5",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": -0.7122147394510042,
+          "bin_2": -0.13378457983830772,
+          "bin_3": 0.15187817447739502,
+          "bin_4": 0.41646615955152183,
+          "bin_5": 0.8648066448050153,
+          "__MISSING__": -0.03440301856832883,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "ext_source_3": {
+        "kind": "numeric",
+        "clip_low": 0.0633753623099886,
+        "clip_high": 0.8337869986815019,
+        "edges": [
+          0.3296550543128238,
+          0.4740512892789932,
+          0.5902333386185574,
+          0.6940926425266661
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "bin_5",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": -0.7938470456166746,
+          "bin_2": -0.10352385522904949,
+          "bin_3": 0.34597894270893853,
+          "bin_4": 0.6125041162617879,
+          "bin_5": 0.9149266190025986,
+          "__MISSING__": -0.16068370304754317,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "region_rating": {
+        "kind": "numeric",
+        "clip_low": 1.0,
+        "clip_high": 3.0,
+        "edges": [
+          2.0
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.5771037584318,
+          "bin_2": -0.05195279515047759,
+          "__MISSING__": 0.0,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "region_rating_city": {
+        "kind": "numeric",
+        "clip_low": 1.0,
+        "clip_high": 3.0,
+        "edges": [
+          2.0
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.5709125835074854,
+          "bin_2": -0.05511326781411685,
+          "__MISSING__": 0.0,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "prev_loans_with_installments": {
+        "kind": "numeric",
+        "clip_low": 0.0,
+        "clip_high": 10.0,
+        "edges": [
+          1.0,
+          2.0,
+          3.0,
+          4.0
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "bin_5",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.3401213453435822,
+          "bin_2": -0.1784716800883362,
+          "bin_3": -0.052606714381914554,
+          "bin_4": 0.02936645635098331,
+          "bin_5": 0.16579944278198763,
+          "__MISSING__": 0.0,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "installment_count": {
+        "kind": "numeric",
+        "clip_low": 0.0,
+        "clip_high": 178.0,
+        "edges": [
+          9.0,
+          17.0,
+          29.0,
+          55.0
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "bin_5",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": -0.005566996451074922,
+          "bin_2": -0.1421759203562533,
+          "bin_3": -0.011458744776687313,
+          "bin_4": 0.06425563739961508,
+          "bin_5": 0.12025535008331198,
+          "__MISSING__": 0.0,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "settled_installment_count": {
+        "kind": "numeric",
+        "clip_low": 0.0,
+        "clip_high": 178.0,
+        "edges": [
+          9.0,
+          17.0,
+          29.0,
+          55.0
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "bin_5",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": -0.006812578854521696,
+          "bin_2": -0.14195423080385108,
+          "bin_3": -0.01173025437169426,
+          "bin_4": 0.06379205903190618,
+          "bin_5": 0.12214923621049532,
+          "__MISSING__": 0.0,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "unpaid_installment_count": {
+        "kind": "numeric",
+        "clip_low": 0.0,
+        "clip_high": 1.0,
+        "edges": [
+          0.0
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.0,
+          "bin_2": 6.123630677061617e-05,
+          "__MISSING__": 0.0,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "late_installment_count": {
+        "kind": "numeric",
+        "clip_low": 0.0,
+        "clip_high": 29.0,
+        "edges": [
+          0.0,
+          1.0,
+          5.0
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.0,
+          "bin_2": 0.20774503958834512,
+          "bin_3": -0.13783951588133192,
+          "bin_4": -0.21785821224898408,
+          "__MISSING__": 0.0,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "max_days_late": {
+        "kind": "numeric",
+        "clip_low": 0.0,
+        "clip_high": 572.0,
+        "edges": [
+          0.0,
+          3.0,
+          13.0
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.0,
+          "bin_2": 0.15266378082444376,
+          "bin_3": -0.17476826046708094,
+          "bin_4": -0.23607410873902393,
+          "__MISSING__": 0.34009073110270877,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "mean_days_late": {
+        "kind": "numeric",
+        "clip_low": 0.0,
+        "clip_high": 24.213181818181926,
+        "edges": [
+          0.0,
+          0.1632653061224489,
+          0.8409090909090909
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.0,
+          "bin_2": 0.16422379690665445,
+          "bin_3": -0.12966528577694028,
+          "bin_4": -0.34759289786250747,
+          "__MISSING__": 0.34009073110270877,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "scheduled_installment_amount": {
+        "kind": "numeric",
+        "clip_low": 21576.11445,
+        "clip_high": 4017962.3085000007,
+        "edges": [
+          106919.35200000003,
+          221488.983,
+          449130.249,
+          1006626.0690000006
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "bin_5",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": -0.3104132225700196,
+          "bin_2": -0.021026045184529368,
+          "bin_3": 0.09025021035065647,
+          "bin_4": 0.11755643987235255,
+          "bin_5": 0.10070828723622238,
+          "__MISSING__": 0.3401213453435822,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "installment_paid_amount": {
+        "kind": "numeric",
+        "clip_low": 21638.3994,
+        "clip_high": 4379903.669250001,
+        "edges": [
+          107741.07900000001,
+          224677.314,
+          459782.39700000035,
+          1049822.5770000003
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "bin_5",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": -0.31130958810646825,
+          "bin_2": -0.019134349730638378,
+          "bin_3": 0.08776139043772195,
+          "bin_4": 0.10866464818383606,
+          "bin_5": 0.11122907560838907,
+          "__MISSING__": 0.3401213453435822,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "installment_paid_ratio": {
+        "kind": "numeric",
+        "clip_low": 1.0,
+        "clip_high": 1.593465818319108,
+        "edges": [
+          1.0
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.0,
+          "bin_2": -0.01575630626101143,
+          "__MISSING__": 0.3401422261305271,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "missing_payment_installment_count": {
+        "kind": "numeric",
+        "clip_low": 0.0,
+        "clip_high": 0.0,
+        "edges": [],
+        "labels": [
+          "bin_1",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 3.0618712380555855e-05,
+          "__MISSING__": 0.0,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "installment_late_rate": {
+        "kind": "numeric",
+        "clip_low": 0.0,
+        "clip_high": 0.6666666666666666,
+        "edges": [
+          0.0,
+          0.05,
+          0.1538461538461538
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.0,
+          "bin_2": 0.1823955855309741,
+          "bin_3": -0.10965773860343148,
+          "bin_4": -0.39572432203580804,
+          "__MISSING__": 0.34009073110270877,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "bureau_loan_count": {
+        "kind": "numeric",
+        "clip_low": 0.0,
+        "clip_high": 20.0,
+        "edges": [
+          1.0,
+          3.0,
+          5.0,
+          8.0
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "bin_5",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": -0.2689816056340762,
+          "bin_2": 0.011278682755234741,
+          "bin_3": 0.08170083769790727,
+          "bin_4": 0.10499241684532197,
+          "bin_5": 0.01807207029656749,
+          "__MISSING__": 0.0,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "bureau_active_loan_count": {
+        "kind": "numeric",
+        "clip_low": 0.0,
+        "clip_high": 8.0,
+        "edges": [
+          0.0,
+          1.0,
+          2.0,
+          3.0
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "bin_5",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.0,
+          "bin_2": 0.027321695745450042,
+          "bin_3": 0.15084469307612935,
+          "bin_4": 0.09260899135429028,
+          "bin_5": -0.19711849403004425,
+          "__MISSING__": 0.0,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "bureau_closed_loan_count": {
+        "kind": "numeric",
+        "clip_low": 0.0,
+        "clip_high": 15.0,
+        "edges": [
+          0.0,
+          1.0,
+          3.0,
+          5.0
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "bin_5",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.0,
+          "bin_2": -0.2980068346347569,
+          "bin_3": 0.027913701786542396,
+          "bin_4": 0.20072504702646987,
+          "bin_5": 0.18169170733949722,
+          "__MISSING__": 0.0,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "bureau_credit_sum": {
+        "kind": "numeric",
+        "clip_low": 20997.6075,
+        "clip_high": 14115410.055000039,
+        "edges": [
+          261652.50000000003,
+          670852.8,
+          1354071.600000001,
+          2812311.18
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "bin_5",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": -0.06703495001635193,
+          "bin_2": 0.0652644666049517,
+          "bin_3": 0.1125980690507063,
+          "bin_4": 0.02717557703949771,
+          "bin_5": 0.1291151508085922,
+          "__MISSING__": -0.2689816056340762,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "bureau_debt_sum": {
+        "kind": "numeric",
+        "clip_low": 0.0,
+        "clip_high": 7141347.050399999,
+        "edges": [
+          0.0,
+          89353.65600000002,
+          326018.7000000002,
+          887630.4000000004
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "bin_5",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.0,
+          "bin_2": 0.2800297679430098,
+          "bin_3": -0.018463578483377385,
+          "bin_4": -0.10228942450395787,
+          "bin_5": -0.13444725214274444,
+          "__MISSING__": -0.21002787721063984,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "bureau_overdue_sum": {
+        "kind": "numeric",
+        "clip_low": 0.0,
+        "clip_high": 31.5,
+        "edges": [
+          0.0
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.0,
+          "bin_2": 0.05138322419938295,
+          "__MISSING__": -0.2690734517100625,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "bureau_max_dpd": {
+        "kind": "numeric",
+        "clip_low": 0.0,
+        "clip_high": 121.0,
+        "edges": [
+          0.0
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.0,
+          "bin_2": 0.05138322419938295,
+          "__MISSING__": -0.2690734517100625,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "bureau_months_31plus": {
+        "kind": "numeric",
+        "clip_low": 0.0,
+        "clip_high": 4.0,
+        "edges": [
+          0.0
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.0,
+          "bin_2": 6.123630677061617e-05,
+          "__MISSING__": 0.0,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "bureau_credit_to_debt_ratio": {
+        "kind": "numeric",
+        "clip_low": 1.0,
+        "clip_high": 170.7003111219734,
+        "edges": [
+          1.548078518278181,
+          2.2525995282337647,
+          3.460556760665221,
+          7.030314169694379
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "bin_5",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": -0.5110813822387841,
+          "bin_2": -0.17997697784363856,
+          "bin_3": 0.030004037980500685,
+          "bin_4": 0.18402672941287396,
+          "bin_5": 0.32140298976178305,
+          "__MISSING__": 0.11049329540243878,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "previous_application_count": {
+        "kind": "numeric",
+        "clip_low": 0.0,
+        "clip_high": 20.0,
+        "edges": [
+          1.0,
+          3.0,
+          4.0,
+          7.0
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "bin_5",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.3202160275187001,
+          "bin_2": -0.005039601766756418,
+          "bin_3": 0.012336829490801384,
+          "bin_4": 0.045612544150680855,
+          "bin_5": -0.10765427868331208,
+          "__MISSING__": 0.0,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "previous_approved_count": {
+        "kind": "numeric",
+        "clip_low": 0.0,
+        "clip_high": 10.0,
+        "edges": [
+          1.0,
+          2.0,
+          3.0,
+          4.0
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "bin_5",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.3073367741375942,
+          "bin_2": -0.15941630123849312,
+          "bin_3": -0.08370022251581054,
+          "bin_4": 0.02015951046153189,
+          "bin_5": 0.1495199115011923,
+          "__MISSING__": 0.0,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "previous_refused_count": {
+        "kind": "numeric",
+        "clip_low": 0.0,
+        "clip_high": 8.0,
+        "edges": [
+          0.0,
+          1.0
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.0,
+          "bin_2": 0.15526902736445425,
+          "bin_3": -0.2675726769202211,
+          "__MISSING__": 0.0,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "previous_refusal_rate": {
+        "kind": "numeric",
+        "clip_low": 0.0,
+        "clip_high": 0.7272727272727272,
+        "edges": [
+          0.0,
+          0.25
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.0,
+          "bin_2": 0.1217254972140413,
+          "bin_3": -0.40896025994167273,
+          "__MISSING__": 0.32015479791918977,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "previous_credit_mean": {
+        "kind": "numeric",
+        "clip_low": 16807.7475,
+        "clip_high": 791418.4698214283,
+        "edges": [
+          58257.0,
+          94666.20000000001,
+          146709.90000000005,
+          252361.87714285715
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "bin_5",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": -0.1641198882617312,
+          "bin_2": -0.006453242404257124,
+          "bin_3": 0.02656238507870347,
+          "bin_4": 0.005430873594847372,
+          "bin_5": 0.07443150198022422,
+          "__MISSING__": 0.3202160275187001,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "previous_credit_sum": {
+        "kind": "numeric",
+        "clip_low": 21280.5,
+        "clip_high": 6999431.399999997,
+        "edges": [
+          126721.8,
+          290221.2,
+          630810.9,
+          1446905.7
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "bin_5",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": -0.1433452557224397,
+          "bin_2": 0.05324405185242821,
+          "bin_3": 0.046439936849787235,
+          "bin_4": 0.028109322898977843,
+          "bin_5": -0.05052714892536639,
+          "__MISSING__": 0.3202160275187001,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "previous_annuity_mean": {
+        "kind": "numeric",
+        "clip_low": 2709.45,
+        "clip_high": 50241.54284999995,
+        "edges": [
+          7053.936,
+          10234.773,
+          14139.36,
+          20422.817999999996
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "bin_5",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": -0.19195632723935963,
+          "bin_2": -0.0664225334602038,
+          "bin_3": -0.013999939463314796,
+          "bin_4": 0.0299354842249243,
+          "bin_5": 0.19571274740065167,
+          "__MISSING__": 0.32008560300434635,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "pos_loan_count": {
+        "kind": "numeric",
+        "clip_low": 0.0,
+        "clip_high": 9.0,
+        "edges": [
+          1.0,
+          2.0,
+          3.0,
+          4.0
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "bin_5",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.2219812557665334,
+          "bin_2": -0.21938597248632366,
+          "bin_3": -0.02495042730693041,
+          "bin_4": 0.08278381007182353,
+          "bin_5": 0.22607131431385988,
+          "__MISSING__": 0.0,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "pos_month_count": {
+        "kind": "numeric",
+        "clip_low": 0.0,
+        "clip_high": 114.0,
+        "edges": [
+          9.0,
+          16.0,
+          26.0,
+          43.0
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "bin_5",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": -0.04842020406876512,
+          "bin_2": -0.20601472293209008,
+          "bin_3": -0.02488531110185213,
+          "bin_4": 0.11629787708572105,
+          "bin_5": 0.20902605415220535,
+          "__MISSING__": 0.0,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "pos_max_dpd": {
+        "kind": "numeric",
+        "clip_low": 0.0,
+        "clip_high": 313.0,
+        "edges": [
+          0.0
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.0,
+          "bin_2": -0.012395567862984475,
+          "__MISSING__": 0.2218894096905474,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "pos_max_dpd_def": {
+        "kind": "numeric",
+        "clip_low": 0.0,
+        "clip_high": 19.0,
+        "edges": [
+          0.0
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.0,
+          "bin_2": -0.012395567862984475,
+          "__MISSING__": 0.2218894096905474,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "pos_delinquent_month_rate": {
+        "kind": "numeric",
+        "clip_low": 0.0,
+        "clip_high": 0.4166666666666666,
+        "edges": [
+          0.0
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.0,
+          "bin_2": -0.012395567862984475,
+          "__MISSING__": 0.2218894096905474,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "cc_loan_count": {
+        "kind": "numeric",
+        "clip_low": 0.0,
+        "clip_high": 1.0,
+        "edges": [
+          0.0,
+          1.0
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.0,
+          "bin_2": 0.03202844304562795,
+          "bin_3": -0.07708969004765212,
+          "__MISSING__": 0.0,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "cc_month_count": {
+        "kind": "numeric",
+        "clip_low": 0.0,
+        "clip_high": 96.0,
+        "edges": [
+          0.0,
+          11.0
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.0,
+          "bin_2": -0.004758200321749766,
+          "bin_3": 0.01907601332325985,
+          "__MISSING__": 0.0,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "cc_max_dpd": {
+        "kind": "numeric",
+        "clip_low": 0.0,
+        "clip_high": 731.0,
+        "edges": [
+          0.0,
+          1.0
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.0,
+          "bin_2": -0.0852050824272093,
+          "bin_3": -0.04591188033693701,
+          "__MISSING__": 0.03202844304562795,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "cc_max_dpd_def": {
+        "kind": "numeric",
+        "clip_low": 0.0,
+        "clip_high": 8.0,
+        "edges": [
+          0.0
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.0,
+          "bin_2": -0.07712030652412796,
+          "__MISSING__": 0.03199782656915198,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "cc_utilization_mean": {
+        "kind": "numeric",
+        "clip_low": 0.0,
+        "clip_high": 1.0046878948909086,
+        "edges": [
+          0.0,
+          0.11517142213078332,
+          0.3811092939393939,
+          0.6690333498543185
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "bin_5",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.0,
+          "bin_2": 0.4352079808941987,
+          "bin_3": 0.11470411438275173,
+          "bin_4": -0.22365425247374413,
+          "bin_5": -0.7188847079856452,
+          "__MISSING__": 0.030068719554727695,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "cc_utilization_max": {
+        "kind": "numeric",
+        "clip_low": 0.0,
+        "clip_high": 1.1523595738461525,
+        "edges": [
+          0.0,
+          0.5941370666666667,
+          1.01430088,
+          1.0533259117647058
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "bin_5",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.0,
+          "bin_2": 0.43331305545234267,
+          "bin_3": -0.044572953149800615,
+          "bin_4": -0.3344293479765424,
+          "bin_5": -0.5376731102696009,
+          "__MISSING__": 0.030068719554727695,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "cc_balance_sum_latest": {
+        "kind": "numeric",
+        "clip_low": 0.0,
+        "clip_high": 733887.7051499988,
+        "edges": [
+          0.0,
+          146822.5980000006
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.0,
+          "bin_2": 0.08850904200108035,
+          "bin_3": -0.5803968214179195,
+          "__MISSING__": 0.03202844304562795,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "cc_limit_sum_latest": {
+        "kind": "numeric",
+        "clip_low": 0.0,
+        "clip_high": 900000.0,
+        "edges": [
+          0.0,
+          45000.0,
+          157500.0,
+          270000.0
+        ],
+        "labels": [
+          "bin_1",
+          "bin_2",
+          "bin_3",
+          "bin_4",
+          "bin_5",
+          "__MISSING__"
+        ],
+        "woe": {
+          "bin_1": 0.0,
+          "bin_2": 0.13296904375958593,
+          "bin_3": -0.15027211033350488,
+          "bin_4": -0.22896956581293826,
+          "bin_5": -0.061401683454370304,
+          "__MISSING__": 0.032089672645138,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "income_type": {
+        "kind": "categorical",
+        "common_categories": [
+          "Commercial associate",
+          "Pensioner",
+          "State servant",
+          "Working"
+        ],
+        "has_rare": true,
+        "minimum_count": 923,
+        "labels": [
+          "Commercial associate",
+          "Pensioner",
+          "State servant",
+          "Working",
+          "__RARE__",
+          "__MISSING__"
+        ],
+        "woe": {
+          "Commercial associate": 0.06162637323236759,
+          "Pensioner": 0.4311523558918003,
+          "State servant": 0.3523733263960053,
+          "Working": -0.18045165131877874,
+          "__RARE__": -0.5864716008683686,
+          "__MISSING__": 0.0,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "education_type": {
+        "kind": "categorical",
+        "common_categories": [
+          "Higher education",
+          "Incomplete higher",
+          "Lower secondary",
+          "Secondary / secondary special"
+        ],
+        "has_rare": true,
+        "minimum_count": 923,
+        "labels": [
+          "Higher education",
+          "Incomplete higher",
+          "Lower secondary",
+          "Secondary / secondary special",
+          "__RARE__",
+          "__MISSING__"
+        ],
+        "woe": {
+          "Higher education": 0.4276769095019186,
+          "Incomplete higher": -0.08532496769882422,
+          "Lower secondary": -0.330137010732699,
+          "Secondary / secondary special": -0.10692813654887495,
+          "__RARE__": 1.6452391525390202,
+          "__MISSING__": 0.0,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "family_status": {
+        "kind": "categorical",
+        "common_categories": [
+          "Civil marriage",
+          "Married",
+          "Separated",
+          "Single / not married",
+          "Widow"
+        ],
+        "has_rare": true,
+        "minimum_count": 923,
+        "labels": [
+          "Civil marriage",
+          "Married",
+          "Separated",
+          "Single / not married",
+          "Widow",
+          "__RARE__",
+          "__MISSING__"
+        ],
+        "woe": {
+          "Civil marriage": -0.21729762603218555,
+          "Married": 0.0717861001170349,
+          "Separated": 0.005073804007195921,
+          "Single / not married": -0.22664636948552006,
+          "Widow": 0.338171157553141,
+          "__RARE__": -1.3336553895754042,
+          "__MISSING__": 0.0,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "gender": {
+        "kind": "categorical",
+        "common_categories": [
+          "F",
+          "M"
+        ],
+        "has_rare": false,
+        "minimum_count": 923,
+        "labels": [
+          "F",
+          "M",
+          "__MISSING__"
+        ],
+        "woe": {
+          "F": 0.1532105182843179,
+          "M": -0.24910880529327978,
+          "__MISSING__": -0.822952225008585,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "housing_type": {
+        "kind": "categorical",
+        "common_categories": [
+          "House / apartment",
+          "Municipal apartment",
+          "Office apartment",
+          "Rented apartment",
+          "With parents"
+        ],
+        "has_rare": true,
+        "minimum_count": 923,
+        "labels": [
+          "House / apartment",
+          "Municipal apartment",
+          "Office apartment",
+          "Rented apartment",
+          "With parents",
+          "__RARE__",
+          "__MISSING__"
+        ],
+        "woe": {
+          "House / apartment": 0.038529662597151966,
+          "Municipal apartment": -0.023083018528025884,
+          "Office apartment": 0.20305893651389265,
+          "Rented apartment": -0.5135700927130851,
+          "With parents": -0.414908006761646,
+          "__RARE__": -0.1369086303412077,
+          "__MISSING__": 0.0,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "occupation_type": {
+        "kind": "categorical",
+        "common_categories": [
+          "Accountants",
+          "Cleaning staff",
+          "Cooking staff",
+          "Core staff",
+          "Drivers",
+          "High skill tech staff",
+          "Laborers",
+          "Low-skill Laborers",
+          "Managers",
+          "Medicine staff",
+          "Private service staff",
+          "Sales staff",
+          "Security staff"
+        ],
+        "has_rare": true,
+        "minimum_count": 923,
+        "labels": [
+          "Accountants",
+          "Cleaning staff",
+          "Cooking staff",
+          "Core staff",
+          "Drivers",
+          "High skill tech staff",
+          "Laborers",
+          "Low-skill Laborers",
+          "Managers",
+          "Medicine staff",
+          "Private service staff",
+          "Sales staff",
+          "Security staff",
+          "__RARE__",
+          "__MISSING__"
+        ],
+        "woe": {
+          "Accountants": 0.6244897464057341,
+          "Cleaning staff": -0.21254418841922815,
+          "Cooking staff": -0.2671468850461562,
+          "Core staff": 0.25016387702656456,
+          "Drivers": -0.3548401388156184,
+          "High skill tech staff": 0.2830862404561085,
+          "Laborers": -0.2881630539902413,
+          "Low-skill Laborers": -0.9597480726210824,
+          "Managers": 0.2854409859557486,
+          "Medicine staff": 0.1362519133500401,
+          "Private service staff": 0.24632223320256807,
+          "Sales staff": -0.1853666365327475,
+          "Security staff": -0.3414598789347138,
+          "__RARE__": -0.010366522864048655,
+          "__MISSING__": 0.22325851788525602,
+          "__UNSEEN__": 0.0
+        }
+      },
+      "contract_type": {
+        "kind": "categorical",
+        "common_categories": [
+          "Cash loans",
+          "Revolving loans"
+        ],
+        "has_rare": false,
+        "minimum_count": 923,
+        "labels": [
+          "Cash loans",
+          "Revolving loans",
+          "__MISSING__"
+        ],
+        "woe": {
+          "Cash loans": -0.034377194128160996,
+          "Revolving loans": 0.3885740094800893,
+          "__MISSING__": 0.0,
+          "__UNSEEN__": 0.0
+        }
+      }
+    },
+    "strategy_baseline_requested_validation_approval": 0.5,
+    "test_used_for": "reporting metrics, observed band rates and fixed-threshold strategy only",
+    "artifacts": [
+      "calibration.csv",
+      "chi_square_tests.csv",
+      "cutoff_table.csv",
+      "eda_overall.csv",
+      "eda_segments.csv",
+      "feature_nulls.csv",
+      "iv_summary.csv",
+      "model_metrics.csv",
+      "odds_ratios.csv",
+      "risk_bands.csv",
+      "scored_applications.csv",
+      "strategy_comparisons.csv",
+      "woe_bins.csv"
+    ]
+  },
+  "exports": {
+    "files": {
+      "dim_profile.csv": 28117,
+      "dim_contract.csv": 57,
+      "dim_region_rating.csv": 86,
+      "dim_risk_band.csv": 2131,
+      "fact_application.csv": 227164321,
+      "fact_roll_rate.csv": 4447897,
+      "agg_repayment_monthly.csv": 1002956,
+      "cutoff_table.csv": 12550,
+      "risk_band_metrics.csv": 7981
+    },
+    "total_bytes": 232666096,
+    "monthly_detail_exported": false,
+    "limit_bytes": 838860800
+  },
+  "notebooks": [
+    "runs/real/notebooks/01_eda.ipynb",
+    "runs/real/notebooks/02_risk_drivers.ipynb",
+    "runs/real/notebooks/03_scorecard.ipynb",
+    "runs/real/notebooks/04_strategy.ipynb"
+  ],
+  "table_counts": {
+    "raw.application_train": 307511,
+    "raw.bureau": 1716428,
+    "raw.bureau_balance": 27299925,
+    "raw.credit_card_balance": 3840312,
+    "raw.installments_payments": 13605401,
+    "raw.pos_cash_balance": 10001358,
+    "raw.previous_application": 1670214,
+    "intermediate.int_applicant_bureau": 263491,
+    "intermediate.int_applicant_cc": 86905,
+    "intermediate.int_applicant_pos": 289444,
+    "intermediate.int_applicant_prev": 291057,
+    "intermediate.int_applicant_repay": 291643,
+    "intermediate.int_bureau_loan": 1465325,
+    "intermediate.int_bureau_month": 14701612,
+    "intermediate.int_cc_loan": 87452,
+    "intermediate.int_cc_month": 3227965,
+    "intermediate.int_history_exclusion_audit": 8,
+    "intermediate.int_installment": 11026627,
+    "intermediate.int_pos_loan": 800337,
+    "intermediate.int_pos_month": 8543375,
+    "intermediate.int_prev_loan_repay": 853344,
+    "marts.agg_repayment_monthly": 37803,
+    "marts.applicant_features": 307511,
+    "marts.cutoff_table": 21,
+    "marts.dim_contract": 2,
+    "marts.dim_profile": 513,
+    "marts.dim_region_rating": 6,
+    "marts.dim_risk_band": 10,
+    "marts.fact_application": 307511,
+    "marts.fact_repayment_monthly": 14701612,
+    "marts.fact_roll_rate": 84629,
+    "marts.model_scores": 307511,
+    "marts.risk_band_metrics": 40
+  },
+  "finished_at": "2026-10-08T02:08:57.520047+00:00",
+  "acceptance_checks_passed": 24,
+  "notebook_execution_checks": [
+    {
+      "notebook": "01_eda.ipynb",
+      "code_cells": 4,
+      "executed_cells": 4,
+      "errors": 0
+    },
+    {
+      "notebook": "02_risk_drivers.ipynb",
+      "code_cells": 4,
+      "executed_cells": 4,
+      "errors": 0
+    },
+    {
+      "notebook": "03_scorecard.ipynb",
+      "code_cells": 4,
+      "executed_cells": 4,
+      "errors": 0
+    },
+    {
+      "notebook": "04_strategy.ipynb",
+      "code_cells": 4,
+      "executed_cells": 4,
+      "errors": 0
+    }
+  ],
+  "automated_tests": {
+    "tests_passed": 29,
+    "subtests_passed": 20,
+    "database": "homecredit_synthetic"
+  }
+}

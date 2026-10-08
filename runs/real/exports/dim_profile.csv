@@ -1,0 +1,514 @@
+profile_id,income_type,education_type,family_status,age_band
+1,Businessman,Higher education,Civil marriage,25-34
+2,Businessman,Higher education,Married,25-34
+3,Businessman,Higher education,Married,35-44
+4,Businessman,Higher education,Married,45-54
+5,Businessman,Higher education,Married,55-64
+6,Businessman,Higher education,Single / not married,35-44
+7,Businessman,Higher education,Single / not married,45-54
+8,Commercial associate,Academic degree,Civil marriage,35-44
+9,Commercial associate,Academic degree,Civil marriage,55-64
+10,Commercial associate,Academic degree,Married,25-34
+11,Commercial associate,Academic degree,Married,35-44
+12,Commercial associate,Academic degree,Married,45-54
+13,Commercial associate,Academic degree,Married,55-64
+14,Commercial associate,Academic degree,Separated,45-54
+15,Commercial associate,Academic degree,Single / not married,25-34
+16,Commercial associate,Academic degree,Single / not married,35-44
+17,Commercial associate,Academic degree,Single / not married,45-54
+18,Commercial associate,Academic degree,Widow,45-54
+19,Commercial associate,Higher education,Civil marriage,25-34
+20,Commercial associate,Higher education,Civil marriage,35-44
+21,Commercial associate,Higher education,Civil marriage,45-54
+22,Commercial associate,Higher education,Civil marriage,55-64
+23,Commercial associate,Higher education,Civil marriage,65+
+24,Commercial associate,Higher education,Civil marriage,<25
+25,Commercial associate,Higher education,Married,25-34
+26,Commercial associate,Higher education,Married,35-44
+27,Commercial associate,Higher education,Married,45-54
+28,Commercial associate,Higher education,Married,55-64
+29,Commercial associate,Higher education,Married,65+
+30,Commercial associate,Higher education,Married,<25
+31,Commercial associate,Higher education,Separated,25-34
+32,Commercial associate,Higher education,Separated,35-44
+33,Commercial associate,Higher education,Separated,45-54
+34,Commercial associate,Higher education,Separated,55-64
+35,Commercial associate,Higher education,Separated,65+
+36,Commercial associate,Higher education,Separated,<25
+37,Commercial associate,Higher education,Single / not married,25-34
+38,Commercial associate,Higher education,Single / not married,35-44
+39,Commercial associate,Higher education,Single / not married,45-54
+40,Commercial associate,Higher education,Single / not married,55-64
+41,Commercial associate,Higher education,Single / not married,65+
+42,Commercial associate,Higher education,Single / not married,<25
+43,Commercial associate,Higher education,Unknown,35-44
+44,Commercial associate,Higher education,Widow,25-34
+45,Commercial associate,Higher education,Widow,35-44
+46,Commercial associate,Higher education,Widow,45-54
+47,Commercial associate,Higher education,Widow,55-64
+48,Commercial associate,Higher education,Widow,65+
+49,Commercial associate,Incomplete higher,Civil marriage,25-34
+50,Commercial associate,Incomplete higher,Civil marriage,35-44
+51,Commercial associate,Incomplete higher,Civil marriage,45-54
+52,Commercial associate,Incomplete higher,Civil marriage,55-64
+53,Commercial associate,Incomplete higher,Civil marriage,<25
+54,Commercial associate,Incomplete higher,Married,25-34
+55,Commercial associate,Incomplete higher,Married,35-44
+56,Commercial associate,Incomplete higher,Married,45-54
+57,Commercial associate,Incomplete higher,Married,55-64
+58,Commercial associate,Incomplete higher,Married,65+
+59,Commercial associate,Incomplete higher,Married,<25
+60,Commercial associate,Incomplete higher,Separated,25-34
+61,Commercial associate,Incomplete higher,Separated,35-44
+62,Commercial associate,Incomplete higher,Separated,45-54
+63,Commercial associate,Incomplete higher,Separated,55-64
+64,Commercial associate,Incomplete higher,Separated,<25
+65,Commercial associate,Incomplete higher,Single / not married,25-34
+66,Commercial associate,Incomplete higher,Single / not married,35-44
+67,Commercial associate,Incomplete higher,Single / not married,45-54
+68,Commercial associate,Incomplete higher,Single / not married,55-64
+69,Commercial associate,Incomplete higher,Single / not married,<25
+70,Commercial associate,Incomplete higher,Widow,25-34
+71,Commercial associate,Incomplete higher,Widow,35-44
+72,Commercial associate,Incomplete higher,Widow,45-54
+73,Commercial associate,Incomplete higher,Widow,55-64
+74,Commercial associate,Incomplete higher,Widow,65+
+75,Commercial associate,Lower secondary,Civil marriage,25-34
+76,Commercial associate,Lower secondary,Civil marriage,35-44
+77,Commercial associate,Lower secondary,Civil marriage,45-54
+78,Commercial associate,Lower secondary,Civil marriage,<25
+79,Commercial associate,Lower secondary,Married,25-34
+80,Commercial associate,Lower secondary,Married,35-44
+81,Commercial associate,Lower secondary,Married,45-54
+82,Commercial associate,Lower secondary,Married,55-64
+83,Commercial associate,Lower secondary,Married,65+
+84,Commercial associate,Lower secondary,Married,<25
+85,Commercial associate,Lower secondary,Separated,25-34
+86,Commercial associate,Lower secondary,Separated,35-44
+87,Commercial associate,Lower secondary,Separated,45-54
+88,Commercial associate,Lower secondary,Separated,55-64
+89,Commercial associate,Lower secondary,Separated,<25
+90,Commercial associate,Lower secondary,Single / not married,25-34
+91,Commercial associate,Lower secondary,Single / not married,35-44
+92,Commercial associate,Lower secondary,Single / not married,45-54
+93,Commercial associate,Lower secondary,Single / not married,55-64
+94,Commercial associate,Lower secondary,Single / not married,<25
+95,Commercial associate,Lower secondary,Unknown,25-34
+96,Commercial associate,Lower secondary,Widow,35-44
+97,Commercial associate,Lower secondary,Widow,45-54
+98,Commercial associate,Lower secondary,Widow,55-64
+99,Commercial associate,Lower secondary,Widow,65+
+100,Commercial associate,Secondary / secondary special,Civil marriage,25-34
+101,Commercial associate,Secondary / secondary special,Civil marriage,35-44
+102,Commercial associate,Secondary / secondary special,Civil marriage,45-54
+103,Commercial associate,Secondary / secondary special,Civil marriage,55-64
+104,Commercial associate,Secondary / secondary special,Civil marriage,65+
+105,Commercial associate,Secondary / secondary special,Civil marriage,<25
+106,Commercial associate,Secondary / secondary special,Married,25-34
+107,Commercial associate,Secondary / secondary special,Married,35-44
+108,Commercial associate,Secondary / secondary special,Married,45-54
+109,Commercial associate,Secondary / secondary special,Married,55-64
+110,Commercial associate,Secondary / secondary special,Married,65+
+111,Commercial associate,Secondary / secondary special,Married,<25
+112,Commercial associate,Secondary / secondary special,Separated,25-34
+113,Commercial associate,Secondary / secondary special,Separated,35-44
+114,Commercial associate,Secondary / secondary special,Separated,45-54
+115,Commercial associate,Secondary / secondary special,Separated,55-64
+116,Commercial associate,Secondary / secondary special,Separated,65+
+117,Commercial associate,Secondary / secondary special,Separated,<25
+118,Commercial associate,Secondary / secondary special,Single / not married,25-34
+119,Commercial associate,Secondary / secondary special,Single / not married,35-44
+120,Commercial associate,Secondary / secondary special,Single / not married,45-54
+121,Commercial associate,Secondary / secondary special,Single / not married,55-64
+122,Commercial associate,Secondary / secondary special,Single / not married,65+
+123,Commercial associate,Secondary / secondary special,Single / not married,<25
+124,Commercial associate,Secondary / secondary special,Widow,25-34
+125,Commercial associate,Secondary / secondary special,Widow,35-44
+126,Commercial associate,Secondary / secondary special,Widow,45-54
+127,Commercial associate,Secondary / secondary special,Widow,55-64
+128,Commercial associate,Secondary / secondary special,Widow,65+
+129,Maternity leave,Higher education,Married,25-34
+130,Maternity leave,Higher education,Married,35-44
+131,Maternity leave,Higher education,Married,55-64
+132,Maternity leave,Secondary / secondary special,Married,35-44
+133,Pensioner,Academic degree,Civil marriage,55-64
+134,Pensioner,Academic degree,Married,55-64
+135,Pensioner,Academic degree,Married,65+
+136,Pensioner,Academic degree,Separated,35-44
+137,Pensioner,Academic degree,Separated,55-64
+138,Pensioner,Academic degree,Widow,55-64
+139,Pensioner,Academic degree,Widow,65+
+140,Pensioner,Higher education,Civil marriage,25-34
+141,Pensioner,Higher education,Civil marriage,35-44
+142,Pensioner,Higher education,Civil marriage,45-54
+143,Pensioner,Higher education,Civil marriage,55-64
+144,Pensioner,Higher education,Civil marriage,65+
+145,Pensioner,Higher education,Married,25-34
+146,Pensioner,Higher education,Married,35-44
+147,Pensioner,Higher education,Married,45-54
+148,Pensioner,Higher education,Married,55-64
+149,Pensioner,Higher education,Married,65+
+150,Pensioner,Higher education,Married,<25
+151,Pensioner,Higher education,Separated,25-34
+152,Pensioner,Higher education,Separated,35-44
+153,Pensioner,Higher education,Separated,45-54
+154,Pensioner,Higher education,Separated,55-64
+155,Pensioner,Higher education,Separated,65+
+156,Pensioner,Higher education,Single / not married,25-34
+157,Pensioner,Higher education,Single / not married,35-44
+158,Pensioner,Higher education,Single / not married,45-54
+159,Pensioner,Higher education,Single / not married,55-64
+160,Pensioner,Higher education,Single / not married,65+
+161,Pensioner,Higher education,Widow,25-34
+162,Pensioner,Higher education,Widow,35-44
+163,Pensioner,Higher education,Widow,45-54
+164,Pensioner,Higher education,Widow,55-64
+165,Pensioner,Higher education,Widow,65+
+166,Pensioner,Incomplete higher,Civil marriage,35-44
+167,Pensioner,Incomplete higher,Civil marriage,45-54
+168,Pensioner,Incomplete higher,Civil marriage,55-64
+169,Pensioner,Incomplete higher,Civil marriage,65+
+170,Pensioner,Incomplete higher,Civil marriage,<25
+171,Pensioner,Incomplete higher,Married,25-34
+172,Pensioner,Incomplete higher,Married,35-44
+173,Pensioner,Incomplete higher,Married,45-54
+174,Pensioner,Incomplete higher,Married,55-64
+175,Pensioner,Incomplete higher,Married,65+
+176,Pensioner,Incomplete higher,Separated,35-44
+177,Pensioner,Incomplete higher,Separated,45-54
+178,Pensioner,Incomplete higher,Separated,55-64
+179,Pensioner,Incomplete higher,Separated,65+
+180,Pensioner,Incomplete higher,Single / not married,25-34
+181,Pensioner,Incomplete higher,Single / not married,35-44
+182,Pensioner,Incomplete higher,Single / not married,45-54
+183,Pensioner,Incomplete higher,Single / not married,55-64
+184,Pensioner,Incomplete higher,Single / not married,65+
+185,Pensioner,Incomplete higher,Single / not married,<25
+186,Pensioner,Incomplete higher,Widow,25-34
+187,Pensioner,Incomplete higher,Widow,35-44
+188,Pensioner,Incomplete higher,Widow,45-54
+189,Pensioner,Incomplete higher,Widow,55-64
+190,Pensioner,Incomplete higher,Widow,65+
+191,Pensioner,Lower secondary,Civil marriage,25-34
+192,Pensioner,Lower secondary,Civil marriage,35-44
+193,Pensioner,Lower secondary,Civil marriage,45-54
+194,Pensioner,Lower secondary,Civil marriage,55-64
+195,Pensioner,Lower secondary,Civil marriage,65+
+196,Pensioner,Lower secondary,Married,25-34
+197,Pensioner,Lower secondary,Married,35-44
+198,Pensioner,Lower secondary,Married,45-54
+199,Pensioner,Lower secondary,Married,55-64
+200,Pensioner,Lower secondary,Married,65+
+201,Pensioner,Lower secondary,Married,<25
+202,Pensioner,Lower secondary,Separated,25-34
+203,Pensioner,Lower secondary,Separated,35-44
+204,Pensioner,Lower secondary,Separated,45-54
+205,Pensioner,Lower secondary,Separated,55-64
+206,Pensioner,Lower secondary,Separated,65+
+207,Pensioner,Lower secondary,Single / not married,25-34
+208,Pensioner,Lower secondary,Single / not married,35-44
+209,Pensioner,Lower secondary,Single / not married,45-54
+210,Pensioner,Lower secondary,Single / not married,55-64
+211,Pensioner,Lower secondary,Single / not married,65+
+212,Pensioner,Lower secondary,Widow,45-54
+213,Pensioner,Lower secondary,Widow,55-64
+214,Pensioner,Lower secondary,Widow,65+
+215,Pensioner,Secondary / secondary special,Civil marriage,25-34
+216,Pensioner,Secondary / secondary special,Civil marriage,35-44
+217,Pensioner,Secondary / secondary special,Civil marriage,45-54
+218,Pensioner,Secondary / secondary special,Civil marriage,55-64
+219,Pensioner,Secondary / secondary special,Civil marriage,65+
+220,Pensioner,Secondary / secondary special,Civil marriage,<25
+221,Pensioner,Secondary / secondary special,Married,25-34
+222,Pensioner,Secondary / secondary special,Married,35-44
+223,Pensioner,Secondary / secondary special,Married,45-54
+224,Pensioner,Secondary / secondary special,Married,55-64
+225,Pensioner,Secondary / secondary special,Married,65+
+226,Pensioner,Secondary / secondary special,Married,<25
+227,Pensioner,Secondary / secondary special,Separated,25-34
+228,Pensioner,Secondary / secondary special,Separated,35-44
+229,Pensioner,Secondary / secondary special,Separated,45-54
+230,Pensioner,Secondary / secondary special,Separated,55-64
+231,Pensioner,Secondary / secondary special,Separated,65+
+232,Pensioner,Secondary / secondary special,Single / not married,25-34
+233,Pensioner,Secondary / secondary special,Single / not married,35-44
+234,Pensioner,Secondary / secondary special,Single / not married,45-54
+235,Pensioner,Secondary / secondary special,Single / not married,55-64
+236,Pensioner,Secondary / secondary special,Single / not married,65+
+237,Pensioner,Secondary / secondary special,Single / not married,<25
+238,Pensioner,Secondary / secondary special,Widow,25-34
+239,Pensioner,Secondary / secondary special,Widow,35-44
+240,Pensioner,Secondary / secondary special,Widow,45-54
+241,Pensioner,Secondary / secondary special,Widow,55-64
+242,Pensioner,Secondary / secondary special,Widow,65+
+243,Pensioner,Secondary / secondary special,Widow,<25
+244,State servant,Academic degree,Married,25-34
+245,State servant,Academic degree,Married,35-44
+246,State servant,Academic degree,Married,45-54
+247,State servant,Academic degree,Separated,25-34
+248,State servant,Academic degree,Separated,55-64
+249,State servant,Academic degree,Single / not married,25-34
+250,State servant,Academic degree,Single / not married,35-44
+251,State servant,Academic degree,Single / not married,<25
+252,State servant,Higher education,Civil marriage,25-34
+253,State servant,Higher education,Civil marriage,35-44
+254,State servant,Higher education,Civil marriage,45-54
+255,State servant,Higher education,Civil marriage,55-64
+256,State servant,Higher education,Civil marriage,<25
+257,State servant,Higher education,Married,25-34
+258,State servant,Higher education,Married,35-44
+259,State servant,Higher education,Married,45-54
+260,State servant,Higher education,Married,55-64
+261,State servant,Higher education,Married,65+
+262,State servant,Higher education,Married,<25
+263,State servant,Higher education,Separated,25-34
+264,State servant,Higher education,Separated,35-44
+265,State servant,Higher education,Separated,45-54
+266,State servant,Higher education,Separated,55-64
+267,State servant,Higher education,Separated,65+
+268,State servant,Higher education,Separated,<25
+269,State servant,Higher education,Single / not married,25-34
+270,State servant,Higher education,Single / not married,35-44
+271,State servant,Higher education,Single / not married,45-54
+272,State servant,Higher education,Single / not married,55-64
+273,State servant,Higher education,Single / not married,65+
+274,State servant,Higher education,Single / not married,<25
+275,State servant,Higher education,Widow,25-34
+276,State servant,Higher education,Widow,35-44
+277,State servant,Higher education,Widow,45-54
+278,State servant,Higher education,Widow,55-64
+279,State servant,Higher education,Widow,65+
+280,State servant,Incomplete higher,Civil marriage,25-34
+281,State servant,Incomplete higher,Civil marriage,35-44
+282,State servant,Incomplete higher,Civil marriage,45-54
+283,State servant,Incomplete higher,Civil marriage,55-64
+284,State servant,Incomplete higher,Civil marriage,<25
+285,State servant,Incomplete higher,Married,25-34
+286,State servant,Incomplete higher,Married,35-44
+287,State servant,Incomplete higher,Married,45-54
+288,State servant,Incomplete higher,Married,55-64
+289,State servant,Incomplete higher,Married,<25
+290,State servant,Incomplete higher,Separated,25-34
+291,State servant,Incomplete higher,Separated,35-44
+292,State servant,Incomplete higher,Separated,45-54
+293,State servant,Incomplete higher,Separated,55-64
+294,State servant,Incomplete higher,Single / not married,25-34
+295,State servant,Incomplete higher,Single / not married,35-44
+296,State servant,Incomplete higher,Single / not married,45-54
+297,State servant,Incomplete higher,Single / not married,55-64
+298,State servant,Incomplete higher,Single / not married,<25
+299,State servant,Incomplete higher,Widow,25-34
+300,State servant,Incomplete higher,Widow,35-44
+301,State servant,Incomplete higher,Widow,45-54
+302,State servant,Incomplete higher,Widow,55-64
+303,State servant,Incomplete higher,Widow,<25
+304,State servant,Lower secondary,Civil marriage,25-34
+305,State servant,Lower secondary,Civil marriage,35-44
+306,State servant,Lower secondary,Civil marriage,45-54
+307,State servant,Lower secondary,Civil marriage,55-64
+308,State servant,Lower secondary,Married,25-34
+309,State servant,Lower secondary,Married,35-44
+310,State servant,Lower secondary,Married,45-54
+311,State servant,Lower secondary,Married,55-64
+312,State servant,Lower secondary,Separated,35-44
+313,State servant,Lower secondary,Separated,45-54
+314,State servant,Lower secondary,Separated,55-64
+315,State servant,Lower secondary,Separated,65+
+316,State servant,Lower secondary,Single / not married,25-34
+317,State servant,Lower secondary,Single / not married,35-44
+318,State servant,Lower secondary,Single / not married,45-54
+319,State servant,Lower secondary,Single / not married,55-64
+320,State servant,Lower secondary,Widow,45-54
+321,State servant,Lower secondary,Widow,55-64
+322,State servant,Lower secondary,Widow,65+
+323,State servant,Secondary / secondary special,Civil marriage,25-34
+324,State servant,Secondary / secondary special,Civil marriage,35-44
+325,State servant,Secondary / secondary special,Civil marriage,45-54
+326,State servant,Secondary / secondary special,Civil marriage,55-64
+327,State servant,Secondary / secondary special,Civil marriage,65+
+328,State servant,Secondary / secondary special,Civil marriage,<25
+329,State servant,Secondary / secondary special,Married,25-34
+330,State servant,Secondary / secondary special,Married,35-44
+331,State servant,Secondary / secondary special,Married,45-54
+332,State servant,Secondary / secondary special,Married,55-64
+333,State servant,Secondary / secondary special,Married,65+
+334,State servant,Secondary / secondary special,Married,<25
+335,State servant,Secondary / secondary special,Separated,25-34
+336,State servant,Secondary / secondary special,Separated,35-44
+337,State servant,Secondary / secondary special,Separated,45-54
+338,State servant,Secondary / secondary special,Separated,55-64
+339,State servant,Secondary / secondary special,Separated,65+
+340,State servant,Secondary / secondary special,Separated,<25
+341,State servant,Secondary / secondary special,Single / not married,25-34
+342,State servant,Secondary / secondary special,Single / not married,35-44
+343,State servant,Secondary / secondary special,Single / not married,45-54
+344,State servant,Secondary / secondary special,Single / not married,55-64
+345,State servant,Secondary / secondary special,Single / not married,65+
+346,State servant,Secondary / secondary special,Single / not married,<25
+347,State servant,Secondary / secondary special,Widow,25-34
+348,State servant,Secondary / secondary special,Widow,35-44
+349,State servant,Secondary / secondary special,Widow,45-54
+350,State servant,Secondary / secondary special,Widow,55-64
+351,State servant,Secondary / secondary special,Widow,65+
+352,Student,Higher education,Civil marriage,25-34
+353,Student,Higher education,Married,45-54
+354,Student,Higher education,Separated,25-34
+355,Student,Higher education,Single / not married,25-34
+356,Student,Higher education,Single / not married,<25
+357,Student,Incomplete higher,Single / not married,<25
+358,Student,Secondary / secondary special,Civil marriage,25-34
+359,Student,Secondary / secondary special,Civil marriage,<25
+360,Student,Secondary / secondary special,Married,35-44
+361,Student,Secondary / secondary special,Married,45-54
+362,Student,Secondary / secondary special,Single / not married,25-34
+363,Unemployed,Higher education,Civil marriage,35-44
+364,Unemployed,Higher education,Married,25-34
+365,Unemployed,Higher education,Married,45-54
+366,Unemployed,Higher education,Single / not married,25-34
+367,Unemployed,Higher education,Single / not married,35-44
+368,Unemployed,Incomplete higher,Married,55-64
+369,Unemployed,Incomplete higher,Married,<25
+370,Unemployed,Incomplete higher,Single / not married,25-34
+371,Unemployed,Secondary / secondary special,Civil marriage,45-54
+372,Unemployed,Secondary / secondary special,Married,25-34
+373,Unemployed,Secondary / secondary special,Married,35-44
+374,Unemployed,Secondary / secondary special,Married,45-54
+375,Unemployed,Secondary / secondary special,Married,55-64
+376,Unemployed,Secondary / secondary special,Separated,45-54
+377,Unemployed,Secondary / secondary special,Single / not married,45-54
+378,Unemployed,Secondary / secondary special,Single / not married,55-64
+379,Unemployed,Secondary / secondary special,Widow,35-44
+380,Unemployed,Secondary / secondary special,Widow,55-64
+381,Working,Academic degree,Civil marriage,25-34
+382,Working,Academic degree,Civil marriage,45-54
+383,Working,Academic degree,Married,25-34
+384,Working,Academic degree,Married,35-44
+385,Working,Academic degree,Married,45-54
+386,Working,Academic degree,Married,55-64
+387,Working,Academic degree,Married,<25
+388,Working,Academic degree,Separated,25-34
+389,Working,Academic degree,Separated,35-44
+390,Working,Academic degree,Separated,45-54
+391,Working,Academic degree,Separated,55-64
+392,Working,Academic degree,Single / not married,25-34
+393,Working,Academic degree,Single / not married,35-44
+394,Working,Academic degree,Single / not married,45-54
+395,Working,Academic degree,Widow,45-54
+396,Working,Academic degree,Widow,55-64
+397,Working,Higher education,Civil marriage,25-34
+398,Working,Higher education,Civil marriage,35-44
+399,Working,Higher education,Civil marriage,45-54
+400,Working,Higher education,Civil marriage,55-64
+401,Working,Higher education,Civil marriage,65+
+402,Working,Higher education,Civil marriage,<25
+403,Working,Higher education,Married,25-34
+404,Working,Higher education,Married,35-44
+405,Working,Higher education,Married,45-54
+406,Working,Higher education,Married,55-64
+407,Working,Higher education,Married,65+
+408,Working,Higher education,Married,<25
+409,Working,Higher education,Separated,25-34
+410,Working,Higher education,Separated,35-44
+411,Working,Higher education,Separated,45-54
+412,Working,Higher education,Separated,55-64
+413,Working,Higher education,Separated,65+
+414,Working,Higher education,Separated,<25
+415,Working,Higher education,Single / not married,25-34
+416,Working,Higher education,Single / not married,35-44
+417,Working,Higher education,Single / not married,45-54
+418,Working,Higher education,Single / not married,55-64
+419,Working,Higher education,Single / not married,65+
+420,Working,Higher education,Single / not married,<25
+421,Working,Higher education,Widow,25-34
+422,Working,Higher education,Widow,35-44
+423,Working,Higher education,Widow,45-54
+424,Working,Higher education,Widow,55-64
+425,Working,Higher education,Widow,65+
+426,Working,Higher education,Widow,<25
+427,Working,Incomplete higher,Civil marriage,25-34
+428,Working,Incomplete higher,Civil marriage,35-44
+429,Working,Incomplete higher,Civil marriage,45-54
+430,Working,Incomplete higher,Civil marriage,55-64
+431,Working,Incomplete higher,Civil marriage,<25
+432,Working,Incomplete higher,Married,25-34
+433,Working,Incomplete higher,Married,35-44
+434,Working,Incomplete higher,Married,45-54
+435,Working,Incomplete higher,Married,55-64
+436,Working,Incomplete higher,Married,65+
+437,Working,Incomplete higher,Married,<25
+438,Working,Incomplete higher,Separated,25-34
+439,Working,Incomplete higher,Separated,35-44
+440,Working,Incomplete higher,Separated,45-54
+441,Working,Incomplete higher,Separated,55-64
+442,Working,Incomplete higher,Separated,<25
+443,Working,Incomplete higher,Single / not married,25-34
+444,Working,Incomplete higher,Single / not married,35-44
+445,Working,Incomplete higher,Single / not married,45-54
+446,Working,Incomplete higher,Single / not married,55-64
+447,Working,Incomplete higher,Single / not married,65+
+448,Working,Incomplete higher,Single / not married,<25
+449,Working,Incomplete higher,Widow,25-34
+450,Working,Incomplete higher,Widow,35-44
+451,Working,Incomplete higher,Widow,45-54
+452,Working,Incomplete higher,Widow,55-64
+453,Working,Incomplete higher,Widow,65+
+454,Working,Incomplete higher,Widow,<25
+455,Working,Lower secondary,Civil marriage,25-34
+456,Working,Lower secondary,Civil marriage,35-44
+457,Working,Lower secondary,Civil marriage,45-54
+458,Working,Lower secondary,Civil marriage,55-64
+459,Working,Lower secondary,Civil marriage,65+
+460,Working,Lower secondary,Civil marriage,<25
+461,Working,Lower secondary,Married,25-34
+462,Working,Lower secondary,Married,35-44
+463,Working,Lower secondary,Married,45-54
+464,Working,Lower secondary,Married,55-64
+465,Working,Lower secondary,Married,65+
+466,Working,Lower secondary,Married,<25
+467,Working,Lower secondary,Separated,25-34
+468,Working,Lower secondary,Separated,35-44
+469,Working,Lower secondary,Separated,45-54
+470,Working,Lower secondary,Separated,55-64
+471,Working,Lower secondary,Separated,<25
+472,Working,Lower secondary,Single / not married,25-34
+473,Working,Lower secondary,Single / not married,35-44
+474,Working,Lower secondary,Single / not married,45-54
+475,Working,Lower secondary,Single / not married,55-64
+476,Working,Lower secondary,Single / not married,65+
+477,Working,Lower secondary,Single / not married,<25
+478,Working,Lower secondary,Widow,25-34
+479,Working,Lower secondary,Widow,35-44
+480,Working,Lower secondary,Widow,45-54
+481,Working,Lower secondary,Widow,55-64
+482,Working,Lower secondary,Widow,65+
+483,Working,Lower secondary,Widow,<25
+484,Working,Secondary / secondary special,Civil marriage,25-34
+485,Working,Secondary / secondary special,Civil marriage,35-44
+486,Working,Secondary / secondary special,Civil marriage,45-54
+487,Working,Secondary / secondary special,Civil marriage,55-64
+488,Working,Secondary / secondary special,Civil marriage,65+
+489,Working,Secondary / secondary special,Civil marriage,<25
+490,Working,Secondary / secondary special,Married,25-34
+491,Working,Secondary / secondary special,Married,35-44
+492,Working,Secondary / secondary special,Married,45-54
+493,Working,Secondary / secondary special,Married,55-64
+494,Working,Secondary / secondary special,Married,65+
+495,Working,Secondary / secondary special,Married,<25
+496,Working,Secondary / secondary special,Separated,25-34
+497,Working,Secondary / secondary special,Separated,35-44
+498,Working,Secondary / secondary special,Separated,45-54
+499,Working,Secondary / secondary special,Separated,55-64
+500,Working,Secondary / secondary special,Separated,65+
+501,Working,Secondary / secondary special,Separated,<25
+502,Working,Secondary / secondary special,Single / not married,25-34
+503,Working,Secondary / secondary special,Single / not married,35-44
+504,Working,Secondary / secondary special,Single / not married,45-54
+505,Working,Secondary / secondary special,Single / not married,55-64
+506,Working,Secondary / secondary special,Single / not married,65+
+507,Working,Secondary / secondary special,Single / not married,<25
+508,Working,Secondary / secondary special,Widow,25-34
+509,Working,Secondary / secondary special,Widow,35-44
+510,Working,Secondary / secondary special,Widow,45-54
+511,Working,Secondary / secondary special,Widow,55-64
+512,Working,Secondary / secondary special,Widow,65+
+513,Working,Secondary / secondary special,Widow,<25
