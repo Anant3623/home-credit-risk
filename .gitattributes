@@ -1,0 +1,4 @@
+dashboard/index.html linguist-generated=true
+dashboard/template.html linguist-detectable=false
+runs/** linguist-generated=true
+*.sql linguist-language=SQL
