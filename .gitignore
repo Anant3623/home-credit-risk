@@ -1,0 +1,17 @@
+.venv/
+.runtime/
+data/raw/*.csv
+data/*.zip
+runs/**/data/
+runs/**/analysis/model.joblib
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+.env
+.DS_Store
+
+# Applicant-level outputs: derived from Kaggle competition data, never committed
+runs/**/analysis/scored_applications.csv
+runs/**/exports/applicant_features.csv
+runs/**/exports/fact_application.csv
+runs/**/notebooks/.kernels/
